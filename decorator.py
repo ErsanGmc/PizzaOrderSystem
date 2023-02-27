@@ -1,0 +1,2 @@
+class Decorator:
+    return None
