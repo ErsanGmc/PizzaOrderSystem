@@ -1,24 +1,112 @@
-class  Pizza: 
-    # Yapıcı Metot Pizza oluşturur
-    def __init__(self,description,cost):
-        self.description=description
-        self.cost=cost
+class Pizza:
+    def __init__(self, description, cost):
+        self.__description = description
+        self.__cost = cost
+    
     def get_description(self):
-        return self.description
+        return self.__description
+    
     def get_cost(self):
-        return self.cost
-    class Classic :
-        cost=5.99
-        description="Classic Pizza","Pizza is a dish of Italian origin consisting of a usually round, flat base of leavened wheat-based dough topped with tomatoes, cheese, and often various other ingredients  which is then baked at a high temperature, traditionally in a wood-fired oven."
-        def __init__(self):
-            pass
-    class Margarita :
-        cost=6.99
-        description="Pizza Margherita (more commonly known in English as Margherita pizza) is a typical Neapolitan pizza, made with San Marzano tomatoes, mozzarella cheese, fresh basil, salt, and extra-virgin olive oil."
-    class TurkPizza :
-        cost=8.99
-        description="Lahmacun is also known as Turkish Pizza (or Armenian Pizza). It brings a cracker thin crust together with a flavorful (and sometimes spicy) minced meat topping."
-    class Sade :
-        cost=4.99
-        description="In the US, a cheese pizza is the usual default option. So a plain pizza is simply another way to refer to the standard issue pie without additional toppings. If you want a pizza without cheese, you would order sauce only, no cheese."
-print(Pizza.Margarita.cost)
+        return self.__cost
+class Klasik(Pizza):
+    description = "Klasik Pizza: Mozzarella Peynir, Domates Sosu"
+    cost = 70.0
+    def __init__(self, description, cost):
+        super().__init__(description, cost)
+    def get_cost(self):
+        return super().get_cost()
+    def get_description(self):
+        return super().get_description()
+class Margarita(Pizza):
+    description = "Margarita Pizza: Mozzarella Peyniri, Domates Sosu, Taze Feslegen"
+    cost = 75.0
+    def __init__(self, description, cost):
+        super().__init__(description, cost)
+    def get_cost(self):
+        return super().get_cost()
+    def get_description(self):
+        return super().get_description()
+class TurkPizza(Pizza):
+
+    description = "Lahmacun: Kiyma, Sogan, Domates, Yesil Biber, Maydanoz"
+    cost = 25.0
+    def __init__(self, description, cost):
+        super().__init__(description, cost)
+    def get_cost(self):
+        return super().get_cost()
+    def get_description(self):
+        return super().get_description()
+class SadePizza(Pizza):
+    description = "Sade Pizza: Mozzarella Peynir, Domates Sosu, Pepperoni, Sosis, Mantar"
+    cost = 72.0
+    def __init__(self, description, cost):
+        super().__init__(description, cost)
+    def get_cost(self):
+        return super().get_cost()
+    def get_description(self):
+        return super().get_description()
+class Decorator(Pizza):
+    def __init__(self, pizza):
+        self.pizza = pizza
+
+    def get_description(self):
+       return self.pizza.get_description() + \
+         ' ' + Pizza.get_description(self)
+
+    def get_cost(self):
+       return self.component.get_cost() + \
+         Pizza.get_cost(self)
+class Zeytin(Decorator):
+    description = "Zeytin"
+    cost = 5.0
+    def __init__(self, pizza):
+        super().__init__(pizza)
+    def get_cost(self):
+        return super().get_cost()
+    def get_description(self):
+        return super().get_description()
+class Mantar(Decorator):
+    description = "Mantar"
+    cost = 5.0
+    def __init__(self, pizza):
+        super().__init__(pizza)
+    def get_cost(self):
+        return super().get_cost()
+    def get_description(self):
+        return super().get_description()
+class KeciPeyniri(Decorator):
+    description = "Keci Peyniri"
+    cost = 5.0
+    def __init__(self, pizza):
+        super().__init__(pizza)
+    def get_cost(self):
+        return super().get_cost()
+    def get_description(self):
+        return super().get_description()
+class Et(Decorator):
+    description = "Et"
+    cost = 5.0
+    def __init__(self, pizza):
+        super().__init__(pizza)
+    def get_cost(self):
+        return super().get_cost()
+    def get_description(self):
+        return super().get_description()
+class Sogan(Decorator):
+    description = "Sogan"
+    cost = 5.0
+    def __init__(self, pizza):
+        super().__init__(pizza)
+    def get_cost(self):
+        return super().get_cost()
+    def get_description(self):
+        return super().get_description()
+class Misir(Decorator):
+    description = "Misir"
+    cost = 5.0
+    def __init__(self, pizza):
+        super().__init__(pizza)
+    def get_cost(self):
+        return super().get_cost()
+    def get_description(self):
+        return super().get_description()
