@@ -188,9 +188,9 @@ def main():
 
     print("Seçilen pizza: {}".format(pizza.__class__.__name__))
     print("Seçilen soslar: {}".format(sos_description))
-    print("Toplam fiyat: {} TL".format(total_cost))
+    print("Toplam fiyat: {} $".format(total_cost))
     print("Açıklama: {}".format(description))
-    if input("Siparişi Onaylıyor Musunuz? Evet/Hayır").lower()=="evet":
+    if input("Siparişi Onaylıyor Musunuz? Evet/Hayır\n").lower()=="evet":
         name=input("İsminizi Giriniz:")
         tc_no=input("TC Kimlik Numarası Giriniz:")
         card_number=input("Kart Numaranızı Giriniz:")
