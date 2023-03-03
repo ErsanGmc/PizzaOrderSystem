@@ -17,9 +17,10 @@ class KlasikPizza(Pizza):
     def __init__(self):
         self.description = "Classic Pizza"
         self.cost = 10.0
-
+    def get_description(self):
+        return super().get_description()
     def get_cost(self):
-        return self.cost
+        return super().get_cost()
 
 
 class MargaritaPizza(Pizza):
@@ -28,7 +29,9 @@ class MargaritaPizza(Pizza):
         self.cost = 8.0
 
     def get_cost(self):
-        return self.cost
+        return super().get_cost()
+    def get_description(self):
+        return super().get_description()
 
 
 class TurkPizza(Pizza):
@@ -37,7 +40,9 @@ class TurkPizza(Pizza):
         self.cost = 12.0
 
     def get_cost(self):
-        return self.cost
+        return super().get_cost()
+    def get_description(self):
+        return super().get_description()
 
 
 class SadePizza(Pizza):
@@ -46,7 +51,9 @@ class SadePizza(Pizza):
         self.cost = 15.0
 
     def get_cost(self):
-        return self.cost
+        return super().get_cost()
+    def get_description(self):
+        return super().get_description()
 class Decorator(Pizza):
     def __init__(self, component):
         self.component = component
@@ -106,9 +113,7 @@ def print_menu():
 
 
 def main():
-    menu_file = open("menu.txt", "r")
-    print(menu_file.read())
-    menu_file.close()
+    print_menu()
 
     # Pizza seçimi
     while True:
