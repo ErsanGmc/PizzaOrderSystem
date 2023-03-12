@@ -1,4 +1,4 @@
-* Please Choose Pizza Base:
+* Please Choose Pizza Base: 
 1: Klasik
 2: Margarita
 3: TurkPizza
