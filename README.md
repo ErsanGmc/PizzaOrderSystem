@@ -1,4 +1,4 @@
-# ** PizzaOrderSystem **
+** # PizzaOrderSystem **
 ## Proje tanımı aşağıdaki gibidir:
 Pizzacı Dükkanı mı açmak istiyorsunuz? O zaman bu proje hayalinizdeki proje olabilir. Proje, kullanıcıların kendi pizzalarını tasarlamalarını ve ödeme yaptıktan sonra kullanıcıyı veri tabanına eklemelerini hedefliyor. Peki bu projede ne tür görevlerimiz var?
 
